@@ -4,12 +4,16 @@
   "description": "Tessel project",
   "main": "index.js",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
     "johnny-five": "^0.11.7",
     "tessel-io": "^1.0.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d build",
+    "led_slide": "npm run build && t2 run build/led_slide.js"
   },
   "repository": "www.github.com/tessel/t2-cli",
   "keywords": [
