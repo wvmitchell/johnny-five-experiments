@@ -14,7 +14,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src -d build",
-    "led_slide": "npm run build && t2 run build/led_slide.js"
+    "clean": "rm -rf build",
+    "led_slide": "npm run build && t2 run build/led_slide.js --name=WALL-E && npm run clean",
+    "button_press": "npm run build && t2 run build/button_press.js --name=WALL-E"
   },
   "repository": "www.github.com/tessel/t2-cli",
   "keywords": [
